@@ -7,7 +7,8 @@
 <title>Shopping List</title>
 </head>
 <script src="angular.min.js"></script>
-<body>
+<link rel="stylesheet" href="list.css">
+
 <script>
 var app = angular.module("myShoppingList", []); 
 app.controller("myCtrl", function($scope) {
@@ -29,6 +30,8 @@ app.controller("myCtrl", function($scope) {
     } ;
 });
 </script>
+<body align:"center">
+<h1>Shopping List</h1>
 
 <div ng-app="myShoppingList" ng-controller="myCtrl">
     <ul>
@@ -37,6 +40,7 @@ app.controller("myCtrl", function($scope) {
             <span ng-click="removeItem($index)">&times;</span>
         </li>
     </ul>
+    <br>
     <input ng-model="addMe">
     <button ng-click="addItem()">Add</button>
     <p>{{errortext}}</p>
